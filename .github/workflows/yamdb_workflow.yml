@@ -43,8 +43,9 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2 
         with:
+          context: ./api_yamdb
           push: true
-          tags: fixer2011/infra_actions:latest
+          tags: fixer2011/api_yamdb:latest
 
   deploy:
     runs-on: ubuntu-latest
