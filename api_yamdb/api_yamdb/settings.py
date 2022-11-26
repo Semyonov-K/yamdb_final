@@ -16,13 +16,7 @@ SECRET_KEY = os.getenv(
 DEBUG = False
 
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '[::1]',
-    'testserver',
-    'web',
-]
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', default='localhost').split(' ')
 
 
 INSTALLED_APPS = [
@@ -102,7 +96,7 @@ AUTH_USER_MODEL = 'reviews.User'
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 

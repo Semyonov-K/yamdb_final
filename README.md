@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com/Semyonov-K/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ### Социальная сеть Yatube (Учебный проект)
 
@@ -11,7 +11,7 @@ Python 3.7 Django 2.2.19
 ## **Запуск проекта**
 
 - Клонировать репозиторий:
- ```  git clone https://github.com/Semyonov-K/infra_sp2.git  ```
+ ```  git clone https://github.com/Semyonov-K/yamdb_final.git  ```
 
 - Создать .env файл в директории /infra/
 
@@ -24,7 +24,7 @@ Python 3.7 Django 2.2.19
  ```  DB_PORT= # укажите порт для подключения к БД ```
 
 - Перейти в папку infra и запустить сборку контейнеров при помощи докера:
- ```  cd infra_sp2/infra ```
+ ```  cd yamdb_final/infra ```
  ```  docker-compose up ```
 
 - Для пересборки контейнеров выполнять команду: (находясь в папке infra, при запущенном Docker):
@@ -52,4 +52,6 @@ Python 3.7 Django 2.2.19
 
  ```  python manage.py loaddata dump.json  ```
 - Проект готов к работе
-- Автор: Кирилл 
+- Развернутый в облаке проект: http://51.250.17.80/admin
+- После запуска проекта, по адресу http://localhost/redoc/ будет доступна документация для Yamdb API.
+- Автор: Кирилл
