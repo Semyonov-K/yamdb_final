@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 
 from .views import (CategoryViewSet, CommentViewSet, GenreViewSet,
                     ReviewViewSet, TitleViewSet, UserViewSet,
-                    registration_API_view, take_confirmation_code_view)
+                    registration_api_view, take_confirmation_code_view)
 
 app_name = 'api'
 
@@ -23,6 +23,6 @@ v1_router.register(
 )
 urlpatterns = [
     path('v1/', include(v1_router.urls)),
-    path('v1/auth/signup/', registration_API_view),
+    path('v1/auth/signup/', registration_api_view),
     path('v1/auth/token/', take_confirmation_code_view),
 ]
