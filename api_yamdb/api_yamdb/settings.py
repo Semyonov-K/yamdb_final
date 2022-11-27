@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv(
 )
 
 
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', default='localhost').split(' ')
