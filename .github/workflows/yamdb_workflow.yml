@@ -45,7 +45,7 @@ jobs:
         with:
           context: ./api_yamdb
           push: true
-          tags: fixer2011/api_yamdb:latest
+          tags: fixer2011/yamdb:latest
 
   deploy:
     runs-on: ubuntu-latest
