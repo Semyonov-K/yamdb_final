@@ -56,9 +56,6 @@ class User(AbstractUser):
         return self.username
 
 
-User = get_user_model()
-
-
 class Category(models.Model):
     name = models.CharField(max_length=256)
     slug = models.SlugField(unique=True, max_length=50)
