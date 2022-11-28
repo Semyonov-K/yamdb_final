@@ -1,23 +1,27 @@
 import os
 from datetime import timedelta
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-SECRET_KEY = os.getenv(
+SECRET_KEY = os.getenv( 
     'SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
-)
+) 
 
 
-DEBUG = os.getenv('DEBUG', default=False)
+DEBUG = False
 
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', default='51.250.17.80').split(' ')
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '[::1]',
+    'testserver',
+    'web',
+]
 
+
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -65,6 +69,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 
+
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
@@ -75,6 +80,7 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', default='5432')
     }
 }
+
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -94,9 +100,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'reviews.User'
 
+
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -107,6 +114,8 @@ USE_TZ = True
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
 }
+
+
 
 
 STATIC_URL = '/static/'
