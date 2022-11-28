@@ -52,6 +52,6 @@ Python 3.7 Django 2.2.19
 
  ```  python manage.py loaddata dump.json  ```
 - Проект готов к работе
-- Развернутый в облаке проект: https://testpracticumforme.ddns.net/
-- После запуска проекта, по адресу http://localhost/redoc/ будет доступна документация для Yamdb API.
+- Развернутый в облаке проект: http://130.193.53.131/admin/
+- После запуска проекта, по адресу http://130.193.53.131/redoc/ будет доступна документация для Yamdb API.
 - Автор: Кирилл
