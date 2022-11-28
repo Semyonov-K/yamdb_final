@@ -146,4 +146,4 @@ dmypy.json
 .mypy_cache
 
 # папки со статикой и медиа
-api_yamdb/static/data
+api_yamdb/api_yamdb/static/data
